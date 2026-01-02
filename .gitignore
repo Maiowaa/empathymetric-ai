@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+venv/
+env/
+
+# Model files (too large)
+model/
+*.bin
+*.safetensors
+
+# Database
+*.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Environment
+.env
+
+# OS
+.DS_Store

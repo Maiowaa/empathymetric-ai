@@ -1,0 +1,23 @@
+{
+  "model_name": "j-hartmann/emotion-english-distilroberta-base",
+  "emotion_mapping": {
+    "anger": "anger",
+    "disgust": "anger",
+    "fear": "fear",
+    "joy": "joy",
+    "neutral": "love",
+    "sadness": "sadness",
+    "surprise": "surprise"
+  },
+  "your_emotions": {
+    "0": "sadness",
+    "1": "joy",
+    "2": "love",
+    "3": "anger",
+    "4": "fear",
+    "5": "surprise"
+  },
+  "test_accuracy": "94.4%",
+  "description": "Pre-trained emotion model (no fine-tuning on noisy data)",
+  "usage": "Use EmotionClassifier wrapper class for predictions"
+}
