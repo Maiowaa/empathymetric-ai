@@ -11,14 +11,14 @@ A production-ready emotion classification system using a **pre-trained RoBERTa m
 
 ## ✨ Key Highlights
 
-- 🎯 **Pre-trained Model**: Uses high-quality emotion model (no training needed!)
-- ⚡ **Fast**: ~20ms inference time per prediction
-- 🎨 **6 Emotions**: Sadness, Joy, Love, Anger, Fear, Surprise
-- 🚀 **Production Ready**: FastAPI backend with proper error handling
-- 📊 **Real-time Dashboard**: Track predictions and statistics
-- 🐳 **Docker Support**: Deploy anywhere in minutes
+-  **Pre-trained Model**: Uses high-quality emotion model (no training needed!)
+-  **Fast**: ~20ms inference time per prediction
+-  **6 Emotions**: Sadness, Joy, Love, Anger, Fear, Surprise
+-  **Production Ready**: FastAPI backend with proper error handling
+-  **Real-time Dashboard**: Track predictions and statistics
+-  **Docker Support**: Deploy anywhere in minutes
 
-## 🎯 Why This Approach?
+##  Why This Approach?
 
 Unlike other emotion classifiers that require training on your data, EmpathyMetric AI uses a **pre-trained model** that was trained on high-quality, carefully annotated emotion datasets. This means:
 
@@ -27,7 +27,7 @@ Unlike other emotion classifiers that require training on your data, EmpathyMetr
 - ✅ **Consistent results** across different use cases
 - ✅ **No GPU needed** for deployment
 
-## 📊 Performance Metrics
+##  Performance Metrics
 
 | Metric | Score |
 |--------|-------|
@@ -37,7 +37,7 @@ Unlike other emotion classifiers that require training on your data, EmpathyMetr
 | Model Size | ~330MB |
 | GPU Required | No (CPU works fine) |
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Option 1: Docker (Recommended - 2 minutes)
 
@@ -55,7 +55,7 @@ unzip emotion_model_production.zip -d model/
 docker-compose up
 ```
 
-Visit `http://localhost:8000` - Done! 🎉
+Visit `http://localhost:8000` - Done! 
 
 ### Option 2: Local Installation (5 minutes)
 
@@ -80,7 +80,7 @@ unzip emotion_model_production.zip -d model/
 python app.py
 ```
 
-## 📦 Model Download
+##  Model Download
 
 The pre-trained model is hosted externally due to size (~330MB):
 
@@ -98,7 +98,7 @@ unzip emotion_model_production.zip -d model/
 huggingface-cli download Maiowaa/empathymetric-model --local-dir ./model
 ```
 
-## 💡 Usage Examples
+##  Usage Examples
 
 ### Web Interface
 
@@ -187,7 +187,7 @@ curl "http://localhost:8000/stats"
 curl "http://localhost:8000/history?limit=10"
 ```
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 empathymetric-ai/
@@ -207,7 +207,7 @@ empathymetric-ai/
     └── README.md                  # Additional documentation
 ```
 
-## 🎨 Emotion Categories
+##  Emotion Categories
 
 | Emotion | Description | Color | Example |
 |---------|-------------|-------|---------|
@@ -238,7 +238,7 @@ DB_PATH=empathy_history.db
 LOG_LEVEL=INFO
 ```
 
-## 📊 API Documentation
+##  API Documentation
 
 Once running, visit:
 - **Interactive Docs**: http://localhost:8000/docs
@@ -303,7 +303,7 @@ docker-compose logs -f
 docker-compose down
 ```
 
-## 🚀 Production Deployment
+##  Production Deployment
 
 ### Performance Optimization
 
@@ -352,7 +352,7 @@ The model internally predicts 7 emotions which are mapped to our 6:
 | sadness | sadness |
 | surprise | surprise |
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 
@@ -366,14 +366,14 @@ Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE)
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Base model: [j-hartmann/emotion-english-distilroberta-base](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base)
 - FastAPI framework
 - Hugging Face Transformers
 - The open-source community
 
-## 📧 Contact
+##  Contact
 
 **Kushagar** - [GitHub](https://github.com/Maiowaa)
 
@@ -382,7 +382,7 @@ Project Link: [https://github.com/Maiowaa/empathymetric-ai](https://github.com/M
 
 ---
 
-## 🗺️ Roadmap
+##  Roadmap
 
 - [ ] Multi-language support (Spanish, French, German)
 - [ ] Emotion intensity scoring (0-100)
@@ -392,21 +392,21 @@ Project Link: [https://github.com/Maiowaa/empathymetric-ai](https://github.com/M
 - [ ] Voice emotion detection
 - [ ] Custom emotion categories
 
-## ⭐ Star History
+##  Star History
 
 If you find this project helpful, please give it a star! ⭐
 
-## 📊 Usage Stats
+##  Usage Stats
 
-- 🔥 **Active Users**: Coming soon
-- 📈 **Predictions Made**: Coming soon
-- 🌍 **Countries**: Coming soon
+-  **Active Users**: Coming soon
+-  **Predictions Made**: Coming soon
+-  **Countries**: Coming soon
 
 ---
 
 <div align="center">
 
-**Built with ❤️ using FastAPI and Transformers**
+**Built using FastAPI and Transformers**
 
 [Report Bug](https://github.com/Maiowaa/empathymetric-ai/issues) · [Request Feature](https://github.com/Maiowaa/empathymetric-ai/issues) · [Documentation](https://github.com/Maiowaa/empathymetric-ai/wiki)
 
