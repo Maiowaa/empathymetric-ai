@@ -2,18 +2,15 @@ services:
   - type: web
     name: empathymetric-ai
     env: python
-    plan: free
     buildCommand: |
       pip install -r requirements.txt
       pip install gdown
       gdown https://drive.google.com/uc?id=1Tz2caKaZTFJ9Tp5-84_Lyxca1YhyDqfF
-      unzip -q emotion_model_production.zip
+      unzip emotion_model_production.zip
       mv emotion_model_production model
     startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
-        value: "3.10"
+        value: 3.10.0
       - key: MODEL_PATH
         value: ./model
-      - key: DB_PATH
-        value: ./empathy_history.db
