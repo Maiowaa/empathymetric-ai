@@ -5,12 +5,23 @@ services:
     buildCommand: |
       pip install -r requirements.txt
       pip install gdown
+      # Ensure any old zip or folder is cleared
+      rm -f emotion_model_production.zip
+      rm -rf model
+      # Download
       gdown https://drive.google.com/uc?id=1Tz2caKaZTFJ9Tp5-84_Lyxca1YhyDqfF
-      unzip emotion_model_production.zip
-      mv emotion_model_production model
+      # Unzip directly into a folder named 'model'
+      mkdir -p model
+      unzip -o emotion_model_production.zip -d model
+      # If the zip contained a subfolder, move its contents to ./model
+      if [ -d "model/emotion_model_production" ]; then
+        mv model/emotion_model_production/* model/
+      fi
+      # CRITICAL: List files so you can see them in Render build logs
+      ls -la model
     startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
         value: 3.10.0
       - key: MODEL_PATH
-        value: ./model
+        value: /opt/render/project/src/model

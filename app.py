@@ -65,6 +65,7 @@ class EmotionClassifier:
             model=model_path,
             device=0 if torch.cuda.is_available() else -1,
             top_k=None
+	    local_files_only=True
         )
         
         self.emotion_map = {
