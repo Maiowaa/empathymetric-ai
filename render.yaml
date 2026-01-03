@@ -4,28 +4,16 @@ services:
     env: python
     plan: free
     buildCommand: |
+      echo "Installing dependencies..."
       pip install -r requirements.txt
       pip install huggingface-hub
       
-      echo "Downloading model from Hugging Face..."
-      python3 << PYTHON
-from huggingface_hub import snapshot_download
-import os
-
-try:
-    snapshot_download(
-        repo_id="j-hartmann/emotion-english-distilroberta-base",
-        local_dir="./model",
-        local_dir_use_symlinks=False
-    )
-    print("✅ Model downloaded successfully")
-    print("Files:", os.listdir("./model"))
-except Exception as e:
-    print(f"❌ Download failed: {e}")
-    exit(1)
-PYTHON
+      echo "Downloading model..."
+      python3 -c "from huggingface_hub import snapshot_download; snapshot_download('j-hartmann/emotion-english-distilroberta-base', local_dir='./model', local_dir_use_symlinks=False); print('Model downloaded!')"
       
+      echo "Verifying model..."
       ls -la model/
+      test -f model/config.json || exit 1
       
     startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
     
