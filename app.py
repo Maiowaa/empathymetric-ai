@@ -68,7 +68,7 @@ class EmotionClassifier:
             raise RuntimeError(f"Model directory not found: {model_path}")
         
         # Check for required model files
-        required_files = ['config.json', 'tokenizer.json']
+        required_files = ['config.json']
         missing_files = []
         for file in required_files:
             file_path = os.path.join(model_path, file)
