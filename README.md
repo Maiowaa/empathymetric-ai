@@ -79,6 +79,20 @@ unzip emotion_model_production.zip -d model/
 # Run the server
 python app.py
 ```
+## Deployment Notes
+
+**Local Development**: Fully functional ✅  
+**Free Tier Deployment**: Limited by 512MB RAM ⚠️  
+**Recommended**: Paid hosting ($7/month) or local deployment
+
+The model requires ~600MB RAM to run. Free tier hosting services (512MB) are insufficient. For production deployment, use:
+- Render Starter Plan ($7/month, 2GB RAM)
+- Railway Pro Plan
+- AWS/GCP with sufficient resources
+- Local deployment with the provided Docker setup
+
+**Live Demo**: Due to hosting costs, no public demo is currently available. Clone and run locally to test!
+
 
 ##  Model Download
 
